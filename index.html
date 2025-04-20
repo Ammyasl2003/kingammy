@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Gate Entry System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sub-about {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PUSSGRC GATE ENTRY SYSTEM</h1>
+        </header>
+        
+          <div class="sub-about">About P.U. Swami Sarvanand Giri Regional Centre</div>
+          <div class="content">
+              <img src="homeimg.png" alt="P.U. Swami Sarvanand Giri Regional Centre">
+              <p>
+                Panjab University opened a Regional Centre for imparting quality technical education to kandi area hoshiarpur with the name of Swami Sarvanand Giri Panjab University Regional Centre in year 2006 with four branches of engineering. In 2007 Panjab university started two new courses in LAW as BALLB 5 year integrated course and 3 Years LLB course, and Master of computer applications (MCA).
+      <br><br>
+                The vison of Regional Centre has been made keeping in mind Vision 2025 of Panjab University
+                
+              </p>
+          </div>
+        
+        <main>
+            <section class="entry-form">
+                <h2>Student Entry Details</h2>
+                <form id="entryForm">
+                    <div class="form-group">
+                        <label for="name">Student Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rollno">Roll Number:</label>
+                        <input type="text" id="rollno" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="course">Course:</label>
+                        <select id="course" required>
+                            <option value="">Select Course</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="BA.LLB">BA.LLB</option>
+                            <option value="B.Com">B.Com</option>
+                            <option value="MCA">MCA</option>
+                            <option value="M.Tech">M.Tech</option>
+                            <option value="PhD">PhD</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Entry Time:</label>
+                        <input type="time" id="time" required>
+                    </div>
+                    
+                    <button type="submit">Record Entry</button>
+                </form>
+            </section>
+            
+            <section class="entries-list">
+                <h2>Today's Entries</h2>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search by name or roll no...">
+                    <button id="searchBtn">Search</button>
+                </div>
+                <table id="entriesTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll No</th>
+                            <th>Course</th>
+                            <th>Entry Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="entriesBody">
+                        <!-- Entries will be added here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        
+        <div class="export-section">
+            <button id="exportBtn">Export All Entries to TXT</button>
+        </div>
+        <footer>
+            <p>© 2025 Ammy Tech</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
